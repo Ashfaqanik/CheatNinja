@@ -34,7 +34,7 @@ dependencies:
   provider: ^4.3.3
   webview_flutter: ^2.0.8
   url_launcher: ^6.0.4
-  device_id: ^0.2.0
+  platform_device_id:
   firebase_messaging: ^10.0.1
   flutter_launcher_icons:
   connectivity: ^3.0.6

@@ -8,11 +8,12 @@ import 'package:cheat_ninja/utils/colors.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
 import 'account.dart';
-import 'package:device_id/device_id.dart';
 import 'category_page.dart';
+import 'chat_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
     BillingProvider billAuth = Provider.of<BillingProvider>(context, listen: false);
     String deviceid;
 
-    deviceid = await DeviceId.getID;
+    deviceid = await PlatformDeviceId.getDeviceId;
 
     if (!mounted) return;
 

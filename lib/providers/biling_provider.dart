@@ -161,6 +161,7 @@ class BillingProvider extends ChangeNotifier{
           );
           _billDetailList.add(bills);
         });
+        print(id);
       });
       notifyListeners();
     }catch(error){
